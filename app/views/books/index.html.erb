@@ -1,0 +1,23 @@
+<h1>Bookmarks</h1>
+<ol>
+
+  <% @books.each do |book| %>
+    <li class="book">
+      <div class="row">
+        <div class="col col-xs-1">
+          <p class="rank-this-week"> <%=book.rank_this_week%> </p>
+        </div>
+        <div class="col col-xs-9">
+          <h3 class="title"><%= book.title%> </h3>
+          <p class="author">by <%=book.author%>  </p>
+          <p class="publisher">(<%=book.publisher%>)</p>
+          <p class="description"> <%=book.description%> </p>
+          <p class="all-reviews"> <a href="/books/show" </a> <%=link_to 'See all Editorial Reviews', book_path(book)%></p>
+        </div>
+        <div class="col col-xs-2">
+          <p class="weeks-on-list"><%=book.weeks_on_list%> weeks on list</p>
+        </div>
+      </div>
+    </li>
+  <%end%>
+</ol>
