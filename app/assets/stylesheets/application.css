@@ -15,5 +15,14 @@
  */
 body {
 
-  background-color: #98a6b3;
+  background-color: #EEF1F4;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+ol {
+  list-style: none;
 }
